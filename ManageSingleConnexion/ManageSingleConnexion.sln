@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageSingleConnexion", "ManageSingleConnexion.csproj", "{8FF8BFF5-DF67-48B9-A23A-D75D786DC67C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "..\TestConsole\TestConsole.csproj", "{8DBD8942-2E89-4624-90BA-EBD754197617}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FF8BFF5-DF67-48B9-A23A-D75D786DC67C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FF8BFF5-DF67-48B9-A23A-D75D786DC67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FF8BFF5-DF67-48B9-A23A-D75D786DC67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FF8BFF5-DF67-48B9-A23A-D75D786DC67C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DBD8942-2E89-4624-90BA-EBD754197617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DBD8942-2E89-4624-90BA-EBD754197617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DBD8942-2E89-4624-90BA-EBD754197617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DBD8942-2E89-4624-90BA-EBD754197617}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

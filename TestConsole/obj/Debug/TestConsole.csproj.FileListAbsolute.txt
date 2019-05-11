@@ -1,0 +1,10 @@
+D:\GenieLogicielL12018-2019\TestConsole\bin\Debug\TestConsole.exe.config
+D:\GenieLogicielL12018-2019\TestConsole\bin\Debug\TestConsole.exe
+D:\GenieLogicielL12018-2019\TestConsole\bin\Debug\TestConsole.pdb
+D:\GenieLogicielL12018-2019\TestConsole\bin\Debug\ManageSingleConnexion.dll
+D:\GenieLogicielL12018-2019\TestConsole\bin\Debug\MySql.Data.dll
+D:\GenieLogicielL12018-2019\TestConsole\bin\Debug\Npgsql.dll
+D:\GenieLogicielL12018-2019\TestConsole\bin\Debug\ManageSingleConnexion.pdb
+D:\GenieLogicielL12018-2019\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
+D:\GenieLogicielL12018-2019\TestConsole\obj\Debug\TestConsole.exe
+D:\GenieLogicielL12018-2019\TestConsole\obj\Debug\TestConsole.pdb
