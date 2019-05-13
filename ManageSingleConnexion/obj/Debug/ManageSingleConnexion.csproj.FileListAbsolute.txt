@@ -1,7 +1,0 @@
-D:\GenieLogicielL12018-2019\ManageSingleConnexion\bin\Debug\ManageSingleConnexion.dll
-D:\GenieLogicielL12018-2019\ManageSingleConnexion\bin\Debug\ManageSingleConnexion.pdb
-D:\GenieLogicielL12018-2019\ManageSingleConnexion\bin\Debug\MySql.Data.dll
-D:\GenieLogicielL12018-2019\ManageSingleConnexion\bin\Debug\Npgsql.dll
-D:\GenieLogicielL12018-2019\ManageSingleConnexion\obj\Debug\ManageSingleConnexion.csprojResolveAssemblyReference.cache
-D:\GenieLogicielL12018-2019\ManageSingleConnexion\obj\Debug\ManageSingleConnexion.dll
-D:\GenieLogicielL12018-2019\ManageSingleConnexion\obj\Debug\ManageSingleConnexion.pdb

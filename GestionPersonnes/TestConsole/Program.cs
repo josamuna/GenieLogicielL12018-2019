@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using ManageSingleConnexion;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ManageSingleConnexion;
+using System;
 
 namespace TestConsole
 {
