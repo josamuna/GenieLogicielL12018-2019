@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionPersonneUtilitiesLib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionPersonneLib", "GestionPersonneLib\GestionPersonneLib.csproj", "{FE4E8C93-384F-47D8-92B5-9BD840AFDEF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionPersonneGUI", "GestionPersonneGUI\GestionPersonneGUI.csproj", "{67BF4043-42C9-49CC-A34B-A7AF13A3F734}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FE4E8C93-384F-47D8-92B5-9BD840AFDEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE4E8C93-384F-47D8-92B5-9BD840AFDEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE4E8C93-384F-47D8-92B5-9BD840AFDEF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67BF4043-42C9-49CC-A34B-A7AF13A3F734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67BF4043-42C9-49CC-A34B-A7AF13A3F734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67BF4043-42C9-49CC-A34B-A7AF13A3F734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67BF4043-42C9-49CC-A34B-A7AF13A3F734}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
