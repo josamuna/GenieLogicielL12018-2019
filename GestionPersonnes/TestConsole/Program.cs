@@ -7,16 +7,16 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-            ImplementeConnexion.Instance.ConType = ConnexionType.SQLServer;
-            Connexion connection = new Connexion();
-
-            connection.Serveur = @"JOSAM\SQLEXPRESS"; 
-            connection.Database = "gestion_personne";
-            connection.User = "sa";
-            connection.Password = "isig";
-
             try
             {
+                ImplementeConnexion.Instance.ConType = ConnexionType.SQLServer;
+                Connexion connection = new Connexion();
+
+                connection.Serveur = @"JOSAM\SQLEXPRESS";
+                connection.Database = "gestion_personne";
+                connection.User = "sa";
+                connection.Password = "isig";
+
                 ImplementeConnexion.Instance.Initialise(connection);
 
                 if (ImplementeConnexion.Instance.Conn.State == System.Data.ConnectionState.Closed)
@@ -38,7 +38,11 @@ namespace TestConsole
             }
             finally
             {
-                ImplementeConnexion.Instance.Conn.Close();
+                if(ImplementeConnexion.Instance.Conn != null)
+                {
+                    if(ImplementeConnexion.Instance.Conn.State == System.Data.ConnectionState.Open)
+                        ImplementeConnexion.Instance.Conn.Close();
+                }    
             }
 
             Console.ReadLine();

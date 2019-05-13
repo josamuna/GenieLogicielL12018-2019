@@ -25,7 +25,7 @@ namespace ManageSingleConnexion
             set
             {
                 if (string.IsNullOrEmpty(value))
-                    throw new Exception("Please specify a valid Server !!!");
+                    throw new InvalidOperationException("Please specify a valid Server !!!");
                 else
                     _serveur = value;
             }

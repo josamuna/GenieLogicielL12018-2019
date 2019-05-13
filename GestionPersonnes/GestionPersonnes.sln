@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageSingleConnexion", "Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{F6A3B02E-401B-4E79-A0C1-14E6292639A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionPersonneUtilitiesLib", "GestionPersonneUtilitiesLib\GestionPersonneUtilitiesLib.csproj", "{EDCA1678-5443-4D21-B41D-02C83AEED77A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionPersonneLib", "GestionPersonneLib\GestionPersonneLib.csproj", "{FE4E8C93-384F-47D8-92B5-9BD840AFDEF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{F6A3B02E-401B-4E79-A0C1-14E6292639A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6A3B02E-401B-4E79-A0C1-14E6292639A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6A3B02E-401B-4E79-A0C1-14E6292639A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDCA1678-5443-4D21-B41D-02C83AEED77A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCA1678-5443-4D21-B41D-02C83AEED77A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCA1678-5443-4D21-B41D-02C83AEED77A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCA1678-5443-4D21-B41D-02C83AEED77A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE4E8C93-384F-47D8-92B5-9BD840AFDEF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE4E8C93-384F-47D8-92B5-9BD840AFDEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE4E8C93-384F-47D8-92B5-9BD840AFDEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE4E8C93-384F-47D8-92B5-9BD840AFDEF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
