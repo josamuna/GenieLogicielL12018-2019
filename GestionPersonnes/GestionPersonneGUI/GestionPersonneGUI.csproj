@@ -81,6 +81,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\dsListePersonnes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsListePersonnes.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmConnexion.resx">
       <DependentUpon>frmConnexion.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +108,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\ListePersonnes.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,6 +125,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reports\dsListePersonnes.xsc">
+      <DependentUpon>dsListePersonnes.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dsListePersonnes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsListePersonnes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\dsListePersonnes.xss">
+      <DependentUpon>dsListePersonnes.xsd</DependentUpon>
+    </None>
     <None Include="Resources\connection.png" />
   </ItemGroup>
   <ItemGroup>

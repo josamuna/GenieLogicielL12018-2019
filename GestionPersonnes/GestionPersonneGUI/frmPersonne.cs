@@ -20,7 +20,7 @@ namespace GestionPersonneGUI
 
         private void frmPersonne_Load(object sender, EventArgs e)
         {
-            // Charger les Sexe
+            // Charger les Sexes
             cboSexe.DataSource = Enum.GetNames(typeof(Sexe));
             cboSexe.SelectedIndex = 0;
 

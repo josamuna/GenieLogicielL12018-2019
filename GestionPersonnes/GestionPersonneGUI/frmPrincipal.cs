@@ -92,5 +92,13 @@ namespace GestionPersonneGUI
             frm.Icon = this.Icon;
             frm.Show();
         }
+
+        private void tblPreview_Click(object sender, EventArgs e)
+        {
+            frmReport frm = new frmReport();
+            frm.MdiParent = this;
+            frm.Icon = this.Icon;
+            frm.Show();
+        }
     }
 }

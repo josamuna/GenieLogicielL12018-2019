@@ -248,6 +248,7 @@
             this.tblPreview.Name = "tblPreview";
             this.tblPreview.Size = new System.Drawing.Size(23, 22);
             this.tblPreview.Text = "Print Preview";
+            this.tblPreview.Click += new System.EventHandler(this.tblPreview_Click);
             // 
             // toolStripSeparator2
             // 

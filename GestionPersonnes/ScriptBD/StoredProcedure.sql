@@ -95,6 +95,18 @@ begin
 end
 go
 
+--Stored Procedure for report of persons
+create procedure sp_liste_personnes
+as
+begin
+	select personne.id,personne.nom + ' ' + ISNULL(personne.postnom,'') + ' ' + ISNULL(personne.prenom,'') as nom,
+	personne.sexe,telephone.id as idtel,telephone.initial + telephone.numero as numero
+	from personne
+	left outer join telephone 
+	on personne.id=telephone.id_proprietaire
+end
+go
+
 --Test Insert and Update
 exec sp_insert_personne 1,'Isamuna','Nkembo','Josue','M'
 exec sp_insert_personne 2,'Mataba','Kyole','Stephanie','F'
@@ -126,4 +138,7 @@ exec sp_select_personne 3
 exec sp_select_telephone 4
 
 exec sp_select_telephones_personne 2
+
+--Test Select report
+exec sp_liste_personnes
 
