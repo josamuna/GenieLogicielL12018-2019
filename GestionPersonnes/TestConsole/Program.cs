@@ -9,7 +9,6 @@ namespace TestConsole
         {
             try
             {
-                ImplementeConnexion.Instance.ConType = ConnexionType.SQLServer;
                 Connexion connection = new Connexion();
 
                 connection.Serveur = @"JOSAM\SQLEXPRESS";
@@ -17,7 +16,7 @@ namespace TestConsole
                 connection.User = "sa";
                 connection.Password = "isig";
 
-                ImplementeConnexion.Instance.Initialise(connection);
+                ImplementeConnexion.Instance.Initialise(connection, ConnexionType.SQLServer);
 
                 if (ImplementeConnexion.Instance.Conn.State == System.Data.ConnectionState.Closed)
                     ImplementeConnexion.Instance.Conn.Open();

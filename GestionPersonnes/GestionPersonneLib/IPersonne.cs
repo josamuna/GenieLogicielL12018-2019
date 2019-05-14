@@ -10,6 +10,7 @@ namespace GestionPersonneLib
         string Postnom { get; set; }
         string Prenom { get; set; }
         Sexe Sex { get; set; }
+        string NomComplet { get; }
         List<ITelephone> TelephonePersonnes { get; }
         int Nouveau();
         void Enregistrer(IPersonne personne);

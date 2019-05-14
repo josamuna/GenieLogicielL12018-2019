@@ -27,7 +27,7 @@ go
 create procedure sp_select_personnes
 as
 begin 
-	select id,nom,postnom,prenom,sexe from personne
+	select id,nom,postnom,prenom,sexe from personne order by nom asc
 end
 go
 
@@ -70,7 +70,7 @@ go
 create procedure sp_select_telephones
 as
 begin
-	select id,id_proprietaire,initial,numero from telephone
+	select id,id_proprietaire,initial,numero from telephone order by numero asc
 end
 go
 
@@ -81,6 +81,7 @@ as
 begin
 	select id,id_proprietaire,initial,numero
 	from telephone where id_proprietaire=@id_personne
+	order by numero asc
 end
 go
 

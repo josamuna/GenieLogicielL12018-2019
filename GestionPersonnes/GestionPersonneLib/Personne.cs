@@ -52,7 +52,11 @@ namespace GestionPersonneLib
                 if (!char.IsLetter(nom[0]))
                     throw new InvalidOperationException("Name must begin with letter !!!");
                 else
-                    return nom;
+                {
+                    nom = nom.ToLower();
+                    return nom[0].ToString().ToUpper() + new string(nom.ToCharArray(), 1, nom.Length -1);
+                }
+                    
             }
             else
                 throw new InvalidOperationException("Name must have value !!!");
@@ -67,7 +71,13 @@ namespace GestionPersonneLib
 
             set
             {
-                _postnom = value;
+                if(!string.IsNullOrEmpty(value))
+                {
+                    value = value.ToLower();
+                     _postnom = value[0].ToString().ToUpper() + new string(value.ToCharArray(), 1, value.Length - 1);
+                }
+                else
+                    _postnom = value;
             }
         }
 
@@ -80,7 +90,13 @@ namespace GestionPersonneLib
 
             set
             {
-                _prenom = value;
+                if (!string.IsNullOrEmpty(value))
+                {
+                    value = value.ToLower();
+                    _prenom = value[0].ToString().ToUpper() + new string(value.ToCharArray(), 1, value.Length - 1);
+                }
+                else
+                    _prenom = value;
             }
         }
 
@@ -101,14 +117,25 @@ namespace GestionPersonneLib
         {
             get
             {
-                List<ITelephone> telephones = new List<ITelephone>();
+                //List<ITelephone> telephones = new List<ITelephone>();
 
                 ITelephone phone = new Telephone();
 
-                telephones.Clear();
-                telephones = phone.TelephonesPersonnes(_id);
+                if (_telephonePersonnes == null)
+                    _telephonePersonnes = new List<ITelephone>();
 
-                return telephones;
+                _telephonePersonnes.Clear();
+                _telephonePersonnes = phone.TelephonesPersonnes(_id);
+
+                return _telephonePersonnes;
+            }
+        }
+
+        public string NomComplet
+        {
+            get
+            {
+                return (_nom + " " + (string.IsNullOrEmpty(_postnom) ? "" : _postnom + " ") + _prenom).Trim();
             }
         }
 

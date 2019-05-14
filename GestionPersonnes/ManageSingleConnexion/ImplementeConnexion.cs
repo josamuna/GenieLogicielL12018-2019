@@ -13,22 +13,22 @@ namespace ManageSingleConnexion
         {
         }
 
-        private ConnexionType _conType;
+        //private ConnexionType _conType;
         private IDbConnection _conn = null;
         private static ImplementeConnexion _instance = null;
 
-        public ConnexionType ConType
-        {
-            get
-            {
-                return _conType;
-            }
+        //public ConnexionType ConType
+        //{
+        //    get
+        //    {
+        //        return _conType;
+        //    }
 
-            set
-            {
-                _conType = value;
-            }
-        }
+        //    set
+        //    {
+        //        _conType = value;
+        //    }
+        //}
 
         public IDbConnection Conn
         {
@@ -53,9 +53,9 @@ namespace ManageSingleConnexion
             }
         }
 
-        public IDbConnection Initialise(Connexion connexion)
+        public IDbConnection Initialise(Connexion connexion, ConnexionType connexionType)
         {
-            switch(_conType)
+            switch(connexionType)
             {
                 case ConnexionType.SQLServer:
                     _conn = new SqlConnection(string.Format("Data source={0};Initial catalog={1};User ID={2};Password={3}",
@@ -70,9 +70,9 @@ namespace ManageSingleConnexion
                         connexion.Serveur, connexion.Database, connexion.User, connexion.Password,connexion.Port));
                     break;
                 case ConnexionType.Oracle:
-                    break;
+                    return null;
                 case ConnexionType.Access:
-                    break;
+                    return null;
             }
             return _conn;
         }

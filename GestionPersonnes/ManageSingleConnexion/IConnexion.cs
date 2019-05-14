@@ -5,6 +5,6 @@ namespace ManageSingleConnexion
 {
     internal interface IConnexion
     {
-        IDbConnection Initialise(Connexion connexion);
+        IDbConnection Initialise(Connexion connexion, ConnexionType connectionType);
     }
 }

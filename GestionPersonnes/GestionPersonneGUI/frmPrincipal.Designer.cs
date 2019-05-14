@@ -32,29 +32,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.mnFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.smConnection = new System.Windows.Forms.ToolStripMenuItem();
+            this.smDisconnection = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.smCloseAll = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.smExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnData = new System.Windows.Forms.ToolStripMenuItem();
+            this.smPersons = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.smListPersons = new System.Windows.Forms.ToolStripMenuItem();
             this.mnParameters = new System.Windows.Forms.ToolStripMenuItem();
             this.smToolbar = new System.Windows.Forms.ToolStripMenuItem();
             this.smStatusBar = new System.Windows.Forms.ToolStripMenuItem();
             this.mnHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.smAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.tblConnection = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tblPreview = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.stStatus = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.tblConnection = new System.Windows.Forms.ToolStripButton();
-            this.tblPreview = new System.Windows.Forms.ToolStripButton();
-            this.smConnection = new System.Windows.Forms.ToolStripMenuItem();
-            this.smDisconnection = new System.Windows.Forms.ToolStripMenuItem();
-            this.smPersons = new System.Windows.Forms.ToolStripMenuItem();
-            this.smListPersons = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.stStatus.SuspendLayout();
@@ -87,6 +87,28 @@
             this.mnFile.Size = new System.Drawing.Size(54, 20);
             this.mnFile.Text = "&Fichier";
             // 
+            // smConnection
+            // 
+            this.smConnection.Image = global::GestionPersonneGUI.Properties.Resources.connection;
+            this.smConnection.ImageTransparentColor = System.Drawing.Color.Black;
+            this.smConnection.Name = "smConnection";
+            this.smConnection.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.N)));
+            this.smConnection.Size = new System.Drawing.Size(208, 22);
+            this.smConnection.Text = "&Connexion";
+            this.smConnection.Click += new System.EventHandler(this.smConnection_Click);
+            // 
+            // smDisconnection
+            // 
+            this.smDisconnection.Image = global::GestionPersonneGUI.Properties.Resources.Disconnection;
+            this.smDisconnection.ImageTransparentColor = System.Drawing.Color.Black;
+            this.smDisconnection.Name = "smDisconnection";
+            this.smDisconnection.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.D)));
+            this.smDisconnection.Size = new System.Drawing.Size(208, 22);
+            this.smDisconnection.Text = "&Déconnexion";
+            this.smDisconnection.Click += new System.EventHandler(this.smDisconnection_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
@@ -109,6 +131,7 @@
             this.smExit.Name = "smExit";
             this.smExit.Size = new System.Drawing.Size(208, 22);
             this.smExit.Text = "&Quitter";
+            this.smExit.Click += new System.EventHandler(this.smExit_Click);
             // 
             // mnData
             // 
@@ -120,10 +143,31 @@
             this.mnData.Size = new System.Drawing.Size(65, 20);
             this.mnData.Text = "&Données";
             // 
+            // smPersons
+            // 
+            this.smPersons.Image = global::GestionPersonneGUI.Properties.Resources.personnes;
+            this.smPersons.ImageTransparentColor = System.Drawing.Color.Black;
+            this.smPersons.Name = "smPersons";
+            this.smPersons.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.P)));
+            this.smPersons.Size = new System.Drawing.Size(249, 22);
+            this.smPersons.Text = "&Personnes";
+            this.smPersons.Click += new System.EventHandler(this.smPersons_Click);
+            // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(246, 6);
+            // 
+            // smListPersons
+            // 
+            this.smListPersons.Image = global::GestionPersonneGUI.Properties.Resources._14;
+            this.smListPersons.Name = "smListPersons";
+            this.smListPersons.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.P)));
+            this.smListPersons.Size = new System.Drawing.Size(249, 22);
+            this.smListPersons.Text = "Liste des personnes";
+            this.smListPersons.Click += new System.EventHandler(this.smListPersons_Click);
             // 
             // mnParameters
             // 
@@ -181,10 +225,29 @@
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "ToolStrip";
             // 
+            // tblConnection
+            // 
+            this.tblConnection.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tblConnection.Image = global::GestionPersonneGUI.Properties.Resources.connection;
+            this.tblConnection.ImageTransparentColor = System.Drawing.Color.Black;
+            this.tblConnection.Name = "tblConnection";
+            this.tblConnection.Size = new System.Drawing.Size(23, 22);
+            this.tblConnection.Text = "New";
+            this.tblConnection.Click += new System.EventHandler(this.tblConnection_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tblPreview
+            // 
+            this.tblPreview.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tblPreview.Image = ((System.Drawing.Image)(resources.GetObject("tblPreview.Image")));
+            this.tblPreview.ImageTransparentColor = System.Drawing.Color.Black;
+            this.tblPreview.Name = "tblPreview";
+            this.tblPreview.Size = new System.Drawing.Size(23, 22);
+            this.tblPreview.Text = "Print Preview";
             // 
             // toolStripSeparator2
             // 
@@ -207,63 +270,6 @@
             this.lblStatus.Size = new System.Drawing.Size(125, 17);
             this.lblStatus.Text = "Gestion des personnes";
             // 
-            // tblConnection
-            // 
-            this.tblConnection.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tblConnection.Image = global::GestionPersonneGUI.Properties.Resources.connection;
-            this.tblConnection.ImageTransparentColor = System.Drawing.Color.Black;
-            this.tblConnection.Name = "tblConnection";
-            this.tblConnection.Size = new System.Drawing.Size(23, 22);
-            this.tblConnection.Text = "New";
-            // 
-            // tblPreview
-            // 
-            this.tblPreview.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tblPreview.Image = ((System.Drawing.Image)(resources.GetObject("tblPreview.Image")));
-            this.tblPreview.ImageTransparentColor = System.Drawing.Color.Black;
-            this.tblPreview.Name = "tblPreview";
-            this.tblPreview.Size = new System.Drawing.Size(23, 22);
-            this.tblPreview.Text = "Print Preview";
-            // 
-            // smConnection
-            // 
-            this.smConnection.Image = global::GestionPersonneGUI.Properties.Resources.connection;
-            this.smConnection.ImageTransparentColor = System.Drawing.Color.Black;
-            this.smConnection.Name = "smConnection";
-            this.smConnection.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.N)));
-            this.smConnection.Size = new System.Drawing.Size(208, 22);
-            this.smConnection.Text = "&Connexion";
-            // 
-            // smDisconnection
-            // 
-            this.smDisconnection.Image = global::GestionPersonneGUI.Properties.Resources.Disconnection;
-            this.smDisconnection.ImageTransparentColor = System.Drawing.Color.Black;
-            this.smDisconnection.Name = "smDisconnection";
-            this.smDisconnection.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.D)));
-            this.smDisconnection.Size = new System.Drawing.Size(208, 22);
-            this.smDisconnection.Text = "&Déconnexion";
-            // 
-            // smPersons
-            // 
-            this.smPersons.Image = global::GestionPersonneGUI.Properties.Resources.personnes;
-            this.smPersons.ImageTransparentColor = System.Drawing.Color.Black;
-            this.smPersons.Name = "smPersons";
-            this.smPersons.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.P)));
-            this.smPersons.Size = new System.Drawing.Size(249, 22);
-            this.smPersons.Text = "&Personnes";
-            // 
-            // smListPersons
-            // 
-            this.smListPersons.Image = global::GestionPersonneGUI.Properties.Resources._14;
-            this.smListPersons.Name = "smListPersons";
-            this.smListPersons.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.P)));
-            this.smListPersons.Size = new System.Drawing.Size(249, 22);
-            this.smListPersons.Text = "Liste des personnes";
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +284,7 @@
             this.Name = "frmPrincipal";
             this.Text = "Interface principale de gestion des personnes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);
