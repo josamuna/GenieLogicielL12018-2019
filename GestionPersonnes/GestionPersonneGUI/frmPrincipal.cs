@@ -75,6 +75,9 @@ namespace GestionPersonneGUI
             }
             catch (NullReferenceException) { }
             catch (InvalidOperationException) { }
+
+            // Desactivation des champs
+            ActivateItems(false);
         }
 
         private void smPersons_Click(object sender, EventArgs e)

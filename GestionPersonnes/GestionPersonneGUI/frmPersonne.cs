@@ -1,12 +1,18 @@
 ﻿using GestionPersonneLib;
 using ManageSingleConnexion;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace GestionPersonneGUI
 {
     public partial class frmPersonne : Form
     {
+        //Declaration BindingSource pour les BindingNavigator
+
+        private BindingSource bdsrc1 = new BindingSource();
+        private BindingSource bdsrc2 = new BindingSource();
+
         private int? _id_personne = null;
         public frmPersonne()
         {
@@ -15,11 +21,21 @@ namespace GestionPersonneGUI
 
         private void refreshPersonne(IPersonne personne)
         {
-            dgvPersonne.DataSource = personne.Personnes();
+            List<IPersonne> lst = new List<IPersonne>();
+            lst = personne.Personnes();
+
+            //Chargement BindingSource avec la liste des personne
+            bdsrc1.DataSource = lst;
+            // Le datasource du DataGrid devient le BindingSource pour faciliter la progression en accord dans ce dernier
+            dgvPersonne.DataSource = bdsrc1;
         }
 
         private void frmPersonne_Load(object sender, EventArgs e)
         {
+            //Affectation BindingSource aux BindingNavigator
+            bdnav1.BindingSource = bdsrc1;
+            bdnav2.BindingSource = bdsrc2;
+
             // Charger les Sexes
             cboSexe.DataSource = Enum.GetNames(typeof(Sexe));
             cboSexe.SelectedIndex = 0;
@@ -33,7 +49,7 @@ namespace GestionPersonneGUI
 
             try
             {
-                refreshPersonne(new Personne());
+                refreshPersonne(new Personne());                
             }
             catch (InvalidOperationException ex)
             {
@@ -221,8 +237,21 @@ namespace GestionPersonneGUI
 
                     _id_personne = personne.Id;
 
+                    // Avant de charger les telephones on vide les champ des telephone
+                    txtIDTel.Clear();
+                    txtInitial.Clear();
+                    txtNumero.Clear();
+
                     // Charger les telephones de la personnes
-                    dgvTelephone.DataSource = personne.TelephonePersonnes;
+                    List<ITelephone> lst = new List<ITelephone>();
+
+                    lst = personne.TelephonePersonnes;
+
+                    // Chargement du BindinSource pour les telephones
+                    bdsrc2.DataSource = lst;
+
+                    // Le datasource du DataGrid devient le BindingSource pour faciliter la progression en accord dans ce dernier
+                    dgvTelephone.DataSource = bdsrc2;
 
                     // Activer bouton
                     btnSave1.Enabled = true;
