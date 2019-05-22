@@ -13,7 +13,7 @@ create table personne
 	nom varchar(50) not null,
 	postnom varchar(50),
 	prenom varchar(50),
-	sexe varchar(1) default 'M',
+	sexe varchar(1) default 'M' not null,
 	constraint pk_personne primary key(id),
 	constraint uk_personne unique(nom,postnom,prenom)
 )
